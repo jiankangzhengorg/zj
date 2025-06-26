@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康证查询结果</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0066CC',
+            success: '#48BB78',
+            accent: '#38B2AC',
+          },
+        },
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden relative">
+    <!-- 生效中标签 -->
+    <div class="absolute top-10 right-0 transform translate-x-6 -translate-y-6 bg-accent text-white text-xs font-bold px-4 py-1 rotate-45">
+      生效中
+    </div>
+    
+    <!-- 卡片顶部 -->
+    <div class="bg-gradient-to-r from-primary to-blue-500 p-6 text-white">
+      <h1 class="text-xl font-bold">浙江省从业人员健康证明</h1>
+      <p class="text-sm opacity-80 mt-1">浙卫证字(2025)第0106001号</p>
+    </div>
+    
+    <!-- 卡片内容 -->
+    <div class="p-6">
+      <div class="flex items-start space-x-4 mb-6">
+        <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
+          <img src="https://picsum.photos/seed/healthcard/200/300" alt="健康证照片" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1">
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="flex">
+              <span class="text-gray-500 w-16">姓名:</span>
+              <span class="font-medium">张三</span>
+            </div>
+            <div class="flex">
+              <span class="text-gray-500 w-16">性别:</span>
+              <span class="font-medium">男</span>
+            </div>
+            <div class="flex">
+              <span class="text-gray-500 w-16">出生日期:</span>
+              <span class="font-medium">1990-01-01</span>
+            </div>
+            <div class="flex">
+              <span class="text-gray-500 w-16">民族:</span>
+              <span class="font-medium">汉</span>
+            </div>
+            <div class="flex col-span-2">
+              <span class="text-gray-500 w-16">证件号码:</span>
+              <span class="font-medium">330106********1234</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4 text-sm mb-6">
+        <div>
+          <div class="text-gray-500">体检机构</div>
+          <div class="font-medium">西湖区疾控中心</div>
+        </div>
+        <div>
+          <div class="text-gray-500">发证日期</div>
+          <div class="font-medium">2025-03-15</div>
+        </div>
+        <div>
+          <div class="text-gray-500">有效期至</div>
+          <div class="font-medium text-success">2026-03-14</div>
+        </div>
+        <div>
+          <div class="text-gray-500">剩余天数</div>
+          <div class="font-medium text-primary">263天</div>
+        </div>
+      </div>
+      
+      <!-- 二维码区域 -->
+      <div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center">
+        <img src="https://picsum.photos/seed/qrcode/150/150" alt="健康证二维码" class="w-32 h-32 mb-2">
+        <p class="text-xs text-gray-500">扫码验证健康证信息</p>
+      </div>
+    </div>
+    
+    <!-- 底部区域 -->
+    <div class="border-t border-gray-200 px-6 py-4 text-center text-xs text-gray-500">
+      证件真实有效
+    </div>
+  </div>
+</body>
+</html>
+    

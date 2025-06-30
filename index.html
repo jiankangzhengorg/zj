@@ -1,101 +1,116 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>天津市从业人员健康证查询结果</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0066CC',
-            success: '#48BB78',
-            accent: '#38B2AC',
-          },
-        },
-      }
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛山市从业人员食品健康证联网查询</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        success: '#36D399',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
-  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden relative">
-    <!-- 生效中标签 -->
-    <div class="absolute top-10 right-0 transform translate-x-6 -translate-y-6 bg-accent text-white text-xs font-bold px-4 py-1 rotate-45">
-      生效中
+<body class="bg-gray-50 min-h-screen p-4">
+    <div class="max-w-md w-full mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- 顶部成功提示 -->
+        <div class="bg-success text-white p-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">查询通过</h1>
+                <div class="bg-white/20 rounded-full p-2">
+                    <i class="fa fa-check-circle text-xl"></i>
+                </div>
+            </div>
+            <p class="mt-2 opacity-90">您的健康证正在生效中</p>
+        </div>
+        
+        <!-- 健康证信息 -->
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">健康证详情</h2>
+                <span class="bg-success/10 text-success text-xs px-3 py-1 rounded-full">有效证件</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-xs text-gray-500">姓名</p>
+                    <p class="font-medium">严嘉全</p>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500">证件编号</p>
+                    <p class="font-medium">2025QX021</p>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500">签发日期</p>
+                    <p class="font-medium">2025-06-28</p>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500">有效期至</p>
+                    <p class="font-medium">2026-06-27</p>
+                </div>
+                <div class="col-span-2">
+                    <p class="text-xs text-gray-500">发证单位</p>
+                    <p class="font-medium">南方医科大学南方医院</p>
+                </div>
+            </div>
+            
+            <!-- 二维码 -->
+            <div class="flex justify-center mb-6">
+                <div class="bg-white p-3 rounded-lg shadow-sm">
+                    <img src="zj.png" alt="健康证二维码" class="w-36 h-36">
+                </div>
+            </div>
+            
+            <!-- 使用说明 -->
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <h3 class="text-sm font-medium text-primary mb-2 flex items-center">
+                    <i class="fa fa-book mr-1"></i> 使用说明
+                </h3>
+                <ul class="text-xs text-gray-600 list-disc pl-5 space-y-1">
+                    <li>本健康证适用于食品、餐饮、美容美发等行业从业人员</li>
+                    <li>使用时请随身携带有效身份证件，配合健康证一同使用</li>
+                    <li>请妥善保管此健康证，避免折叠、污损</li>
+                    <li>有效期内可重复使用，过期后需重新办理</li>
+                </ul>
+            </div>
+            
+            <!-- 注意事项 -->
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <h3 class="text-sm font-medium text-primary mb-2 flex items-center">
+                    <i class="fa fa-info-circle mr-1"></i> 注意事项
+                </h3>
+                <p class="text-xs text-gray-600">请妥善保管此健康证，使用时请随身携带有效身份证件。</p>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="bg-gray-50 px-6 py-4">
+            <div class="flex justify-between text-xs text-gray-500 mb-3">
+                <a href="#" class="flex items-center">
+                    <i class="fa fa-home mr-1"></i> 首页
+                </a>
+                <a href="#" class="flex items-center">
+                    <i class="fa fa-question-circle mr-1"></i> 帮助
+                </a>
+                <a href="#" class="flex items-center">
+                    <i class="fa fa-phone mr-1"></i> 12320
+                </a>
+                <a href="#" class="flex items-center">
+                    <i class="fa fa-user-circle mr-1"></i> 个人中心
+                </a>
+            </div>
+            <p class="text-center text-xs text-gray-500 mb-1">工作时间: 周一至周五 9:00-18:00</p>
+            <p class="text-center text-xs text-gray-500">© 2025 全国三甲医院健康证验真查询平台</p>
+        </div>
     </div>
-    
-    <!-- 卡片顶部 -->
-    <div class="bg-gradient-to-r from-primary to-blue-500 p-6 text-white">
-      <h1 class="text-xl font-bold">天津市从业人员健康证明</h1>
-      <p class="text-sm opacity-80 mt-1">津证字(2025)第0106001号</p>
-    </div>
-    
-    <!-- 卡片内容 -->
-    <div class="p-6">
-      <div class="flex items-start space-x-4 mb-6">
-        <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
-          <img src="zp.png" alt="健康证照片" class="w-full h-full object-cover">
-        </div>
-        <div class="flex-1">
-          <div class="grid grid-cols-2 gap-2 text-sm">
-            <div class="flex">
-              <span class="text-gray-500 w-16">姓名:</span>
-              <span class="font-medium">王树庆</span>
-            </div>
-            <div class="flex">
-              <span class="text-gray-500 w-16">性别:</span>
-              <span class="font-medium">男</span>
-            </div>
-            <div class="flex">
-              <span class="text-gray-500 w-16">出生日期:</span>
-              <span class="font-medium">1987-10-12</span>
-            </div>
-            <div class="flex">
-              <span class="text-gray-500 w-16">民族:</span>
-              <span class="font-medium">汉</span>
-            </div>
-            <div class="flex col-span-2">
-              <span class="text-gray-500 w-16">证件号码:</span>
-              <span class="font-medium">1309****871012489X</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="grid grid-cols-2 gap-4 text-sm mb-6">
-        <div>
-          <div class="text-gray-500">体检机构</div>
-          <div class="font-medium">天津市北辰医院健康管理中心</div>
-        </div>
-        <div>
-          <div class="text-gray-500">签发日期</div>
-          <div class="font-medium">2025-06-28</div>
-        </div>
-        <div>
-          <div class="text-gray-500">有效期至</div>
-          <div class="font-medium text-success">2026-06-27</div>
-        </div>
-        <div>
-          <div class="text-gray-500">剩余天数</div>
-          <div class="font-medium text-primary">346天</div>
-        </div>
-      </div>
-      
-      <!-- 二维码区域 -->
-      <div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center">
-        <img src="zj.png" alt="健康证二维码" class="w-32 h-32 mb-2">
-        <p class="text-xs text-gray-500">扫码验证健康证信息</p>
-      </div>
-    </div>
-    
-    <!-- 底部区域 -->
-    <div class="border-t border-gray-200 px-6 py-4 text-center text-xs text-gray-500">
-      证件真实有效
-    </div>
-  </div>
 </body>
 </html>
     
